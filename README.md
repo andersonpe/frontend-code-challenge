@@ -47,3 +47,21 @@ The programming challenge exists in 2 parts:
 * Usage of linters.
 * Git hooks.
 * Usage of Material Design concepts
+
+
+## Respostas
+
+Para a execução teste teste resolvi não utilizar nenhum framework JavaScript ou preprocessador CSS.
+
+## Execução
+
+1) Instale as dependências 
+
+```
+npm i
+```
+2) Ative o servidor webpack
+
+```
+npm run serve
+```

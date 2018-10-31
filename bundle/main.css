@@ -1,3 +1,94 @@
 body {
-    background-color: red;
+    margin: 0 auto;
+    background-color: rgb(236, 234, 234);
+}
+    
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans',Arial,sans-serif;
+}
+    
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
+    grid-template-rows: 1fr;
+    grid-column-gap: 1vmin;
+    grid-row-gap: 1vmin;
+}
+    
+.card {
+    min-width: 305px;
+    width: 100%;
+    border: solid 1px #F2F2F2;
+}
+    
+.card-cover {
+    width: 100%;
+    min-height: 150px;
+    background-size: cover;
+    padding: 10px;
+}
+    
+.card-content {
+    box-sizing: border-box;
+    padding: 20px;
+    height: 139px;
+}
+    
+.card-cover > span {
+    background-color: #FFFFFF;
+    padding: 5px;
+    font-size: 11px; 
+    color: #ACACAC;
+    box-shadow: 3px 2px 5px 0px rgba(172,172,172,.72);
+    -webkit-box-shadow: 3px 2px 5px 0px rgba(172,172,172,.72);
+    -moz-box-shadow: 3px 2px 5px 0px rgba(172,172,172,.72);
+}
+    
+.card-info {
+    font-size: 12px;
+    padding: 10px 0px; 
+    color: #ACACAC;
+}
+    
+.card-lower-info {
+    font-size: 12px;
+    display: flex;
+}
+    
+.card-lower-info span:first-of-type {
+    font-weight: 700;
+    width: 45%;
+}
+    
+.card-lower-info span:nth-of-type(2),
+.card-lower-info span:last-of-type {
+    text-align: center;
+    width: 30%;
+}
+
+.separator {
+    width: 1px;
+    background-color: #ACACAC;
+}
+    
+.card-info-title {
+    min-height: 48px;
+}
+    
+.card-info-title {
+    font-size: 14px; 
+}
+    
+.loading {
+    background-color: #F2F2F2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
 }
