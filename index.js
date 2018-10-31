@@ -1,1 +1,1 @@
-console.log('hola');
+require('./src/app/app');

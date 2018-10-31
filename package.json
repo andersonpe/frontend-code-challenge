@@ -7,7 +7,7 @@
   "author": "Tejas Kumar <tejas.kumar@mcmakler.de>",
   "license": "MIT",
   "scripts": {
-    "serve": "webpack-dev-server"
+    "serve": "webpack-dev-server --content-base build/"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
