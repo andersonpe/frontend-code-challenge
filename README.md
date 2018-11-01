@@ -51,7 +51,7 @@ The programming challenge exists in 2 parts:
 
 ## Respostas
 
-Para a execução teste teste resolvi não utilizar nenhum framework JavaScript ou preprocessador CSS.
+Para a execução deste teste resolvi não utilizar nenhum framework JavaScript ou preprocessador CSS.
 
 ## Execução
 
