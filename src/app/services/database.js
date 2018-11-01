@@ -3,21 +3,22 @@ const json = require('../db.json');
 export class Database {
 
     constructor( ) {
-
+        this.data = json;
     }
 
     select( qtd ) {
         return new Promise( ( resolve, reject ) => {
-            let data;
-            if ( json === undefined ) {
+            let resultSet;
+            if ( this.data === undefined ) {
                 reject();
             }
             if ( qtd === undefined ) {
-                data = json.data;
+                resultSet = this.data.data;
             } else {
-                data = json.data.slice(0, qtd);
+                resultSet = this.data.data.slice(0, qtd);
             }
-            resolve(data);
+            resolve(resultSet);
         });
-    }
+    };
+    
 }
