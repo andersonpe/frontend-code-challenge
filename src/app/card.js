@@ -139,7 +139,6 @@ export class Card {
 
     createCardItens (  ) {
         let cardItens = [];
-        console.log(this.dataset);
         for( let i = 0; i < this.dataCount; i++ ) {
             cardItens.push( this.createCard( this.dataset[i] ) );
         }
