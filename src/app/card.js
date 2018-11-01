@@ -10,6 +10,8 @@ export class Card {
     init( root, data ) {
        this.root = root;
        this.dataset = data;
+       this.createCardItens();
+       this.appendToGrid();
     };
     
     formatInfo ( data ) {
@@ -18,10 +20,10 @@ export class Card {
         let elementsNames = [{type: 'span', text: price, appendText: '&euro;'},
                              {type: 'span', text: data.realestateSummary.numberOfRooms, appendText: ' Zimmer'},
                              {type: 'span', text: '', class: 'separator'},
-                             {type: 'span', text: data.realestateSummary.space, appendText: ' m<sup>2</sup>'}]
+                             {type: 'span', text: data.realestateSummary.space.toFixed(2), appendText: ' m<sup>2</sup>'}]
 
         for( let i = 0; i < elementsNames.length; i++ ) {
-            elements.push( createHTMLElement( elementsNames[i] ) );                          
+            elements.push( this.createHTMLElement( elementsNames[i] ) );                          
         }
         return elements;                 
     };
@@ -79,7 +81,7 @@ export class Card {
         let children = [];
 
         for( let i = 0 ; i < elementsNames.length; i++ ) {
-            let ele = createHTMLElement( elementsNames[i] );
+            let ele = this.createHTMLElement( elementsNames[i] );
             if ( elementsNames[i].hasOwnProperty('wrapper') ) {
                 wrapper = ele;
             } else {
@@ -137,16 +139,17 @@ export class Card {
 
     createCardItens (  ) {
         let cardItens = [];
-        for( let i = 0; i < dataCount; i++ ) {
-            cardItens.push( this.createCard( dataset[i] ) );
+        console.log(this.dataset);
+        for( let i = 0; i < this.dataCount; i++ ) {
+            cardItens.push( this.createCard( this.dataset[i] ) );
         }
-        cards = cardItens;
+        this.cards = cardItens;
     };
 
     appendToGrid( ) {
         let grid = document.querySelector('div.grid');
-        for( let i = 0; i < dataCount; i++ ) {
-            grid.appendChild(cards[i]);
+        for( let i = 0; i < this.dataCount; i++ ) {
+            grid.appendChild(this.cards[i]);
         }
     };
 

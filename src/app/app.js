@@ -1,27 +1,23 @@
 import { Card } from "./card";
-import { Http } from "./services/http";
+import { Database } from "./services/database";
 
 export class App {
 
     constructor( ) {
         this.root = document.getElementsByTagName('my-app');
-        this.service = new Http();
+        this.database = new Database();
         this.cards = new Card();
-        this.url = "https://api.mcmakler.de/v1/advertisements";
         this.init();
     }
 
     init( ) {
-        this.service.get( this.url ).then( ( data ) => {
+        this.database.select( 10 ).then( ( data ) => {
             this.cards.init( this.root, data );
-        }, ( error ) => {
-            console.log(error);
+        }, () => {
+            console.error('Erro');
         } );
     }
 
 }    
 
 let app = new App();
-
-
-

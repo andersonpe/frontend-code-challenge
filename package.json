@@ -18,5 +18,10 @@
     "style-loader": "^0.18.2",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "file-system": "^2.2.2",
+    "graceful-fs": "^4.1.11",
+    "load-json-file": "^5.1.0"
   }
 }
